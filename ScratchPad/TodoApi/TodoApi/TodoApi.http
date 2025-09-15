@@ -1,0 +1,36 @@
+### Get all todo items
+GET https://localhost:32781/todos
+Accept: application/json
+
+### Get completed todo items
+GET https://localhost:32781/todos/completed
+Accept: application/json
+
+### Get a todo item by id
+GET https://localhost:32781/todos/1
+Accept: application/json
+
+### Add a new todo item
+POST https://localhost:32781/todos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Sample Todo",
+  "isCompleted": false
+}
+
+### Update an existing todo item
+PUT https://localhost:32781/todos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1,
+  "name": "Updated Todo",
+  "isCompleted": true
+}
+
+### Delete a todo item
+DELETE https://localhost:32781/todos/1
+Accept: application/json
