@@ -22,7 +22,28 @@ For detailed course content and original materials, please refer to the [Udemy C
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository contains code under different licenses:
+
+### Original Course Code
+The original Udemy course materials and source code (excluding the `ScratchPad` directory) retain the license of the original course author. See the [LICENSE](LICENSE) file for details.
+
+### Derivative Code
+All code within the `ScratchPad/` directory is derivative work created during the learning process and is licensed under the MIT License.
+
+```
+MIT License - ScratchPad Directory
+Copyright (c) 2025 Steve Miller
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
 
 ## 🤖 AI-Assisted Development
 
