@@ -1,8 +1,4 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Threading.Tasks;
 
 public static class TodoEndpoints
 {
@@ -42,6 +38,13 @@ public static class TodoEndpoints
         // Adds a new todo item.
         endpoints.MapPost("/todos", async (TodoItem item, TodoDbContext db, HttpContext context) =>
         {
+            if (string.IsNullOrWhiteSpace(item.Name))
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                await context.Response.WriteAsync("Todo item Name cannot be null or empty.");
+                return;
+            }
+
             db.Todos.Add(item);
             await db.SaveChangesAsync();
             context.Response.StatusCode = StatusCodes.Status201Created;
