@@ -16,6 +16,13 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// Seed data for InMemory database
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<TodoDbContext>();
+    TodoDbSeeder.Seed(db);
+}
+
 // Enable Swagger middleware and UI
 app.UseSwagger();
 app.UseSwaggerUI(c =>
